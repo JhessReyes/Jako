@@ -79,8 +79,11 @@ C:\Users\jhess\source\repos\Nueva\Jako\Jako\bin\es\System.Web.Razor.resources.dl
 C:\Users\jhess\source\repos\Nueva\Jako\Jako\bin\es\System.Web.WebPages.resources.dll
 C:\Users\jhess\source\repos\Nueva\Jako\Jako\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\jhess\source\repos\Nueva\Jako\Jako\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\jhess\source\repos\Nueva\Jako\Jako\obj\Debug\Jako.csprojAssemblyReference.cache
 C:\Users\jhess\source\repos\Nueva\Jako\Jako\obj\Debug\Jako.csproj.CoreCompileInputs.cache
 C:\Users\jhess\source\repos\Nueva\Jako\Jako\obj\Debug\Jako.csproj.CopyComplete
 C:\Users\jhess\source\repos\Nueva\Jako\Jako\obj\Debug\Jako.dll
 C:\Users\jhess\source\repos\Nueva\Jako\Jako\obj\Debug\Jako.pdb
+C:\Users\jhess\source\repos\Nueva\Jako\Jako\bin\EntityFramework.dll
+C:\Users\jhess\source\repos\Nueva\Jako\Jako\bin\EntityFramework.SqlServer.dll
+C:\Users\jhess\source\repos\Nueva\Jako\Jako\bin\EntityFramework.xml
+C:\Users\jhess\source\repos\Nueva\Jako\Jako\bin\EntityFramework.SqlServer.xml

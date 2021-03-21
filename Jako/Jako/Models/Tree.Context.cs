@@ -25,6 +25,6 @@ namespace Jako.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Nodo> Nodo { get; set; }
+  //      public virtual DbSet<Nodo> Nodo { get; set; }
     }
 }
