@@ -1,0 +1,32 @@
+﻿@model  Jako.Models.Nodo
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Nodos</h1>
+    @*<table class="table table-stripped">
+            <thead>
+                <tr>
+                    <th> Id </th>
+                    <th> Pregunta </th>
+                    <th> Nodo Izquierdo </th>
+                    <th> Nodo Derecho </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td> @item.pregunta</td>
+                        <td> @item.hizq</td>
+                        <td> @item.hder</td>
+                        <td><a href="~/home/Pregunta/@item.Id">Iniciar</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>*@
+    <p><a href="~/home/Pregunta/1" class="btn btn-primary btn-lg">INICIAR &raquo;</a></p>
+</div>
+

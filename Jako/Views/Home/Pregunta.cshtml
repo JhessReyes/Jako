@@ -1,0 +1,30 @@
+﻿@model  Jako.Models.Nodo
+@{
+    ViewBag.Title = "Pregunta";
+}
+@*<script>
+        function llamarVistaParcial() {
+                var laURLDeLaVista = '@Url.Action(Model.hizq > 0 ? "~/home/Pregunta/"+Model.hizq : "~/home/Pregunta/"+Model.Id)';
+            $.ajax({
+                cache: false,
+                async: true,
+                type: "GET",
+                url: laURLDeLaVista,
+                data: {},
+                success: function (response) {
+                    $('#resultado').html('');
+                    $('#resultado').html(response);
+                }
+            });
+        }
+    </script>*@
+
+<html>
+<body>
+    <div class="jumbotron" style="justify-content">
+        <h1>@Model.pregunta</h1>
+        <input class="btn-primary" type="button" onclick="location.href='@(Model.hizq > 0 ? Model.hizq : Model.Id)';" value="Si" />
+        <input class="btn-warning" type="button" onclick="location.href='@(Model.hder > 0 ? Model.hizq : Model.Id)';" value="No" />
+    </div>
+</body>
+</html>

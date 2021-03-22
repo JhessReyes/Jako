@@ -88,3 +88,7 @@ C:\Users\ASUS\Downloads\Jako-master (1)\Jako-master\Jako\Jako\obj\Debug\Jako.csp
 C:\Users\ASUS\Downloads\Jako-master (1)\Jako-master\Jako\Jako\obj\Debug\Jako.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\Downloads\Jako-master (1)\Jako-master\Jako\Jako\obj\Debug\Jako.dll
 C:\Users\ASUS\Downloads\Jako-master (1)\Jako-master\Jako\Jako\obj\Debug\Jako.pdb
+C:\Users\jhess\OneDrive\Documentos\GitHub\Jako\Jako\Jako\obj\Debug\Jako.csprojAssemblyReference.cache
+C:\Users\jhess\OneDrive\Documentos\GitHub\Jako\Jako\Jako\obj\Debug\Jako.csproj.CoreCompileInputs.cache
+C:\Users\jhess\OneDrive\Documentos\GitHub\Jako\Jako\Jako\obj\Debug\Jako.dll
+C:\Users\jhess\OneDrive\Documentos\GitHub\Jako\Jako\Jako\obj\Debug\Jako.pdb
