@@ -37,6 +37,25 @@ namespace Jako.Models
             }
             return nodo;
         }
+        public Nodo ObtenerP(int id)
+        {
+            var preg = new Nodo();
+            try
+            {
+                using (var context = new Model1())
+                {
+                    preg = context.Nodo
+                                  .Where(x => x.Id == id)
+                                  .Single();
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            return preg;
+
+        }
 
     }
 }
