@@ -1,0 +1,51 @@
+﻿@model Jako.Models.Nodo
+
+@{
+    ViewBag.Title = "Respuest";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Respuest</h2>
+
+<div>
+    <h4>Nodo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pregunta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pregunta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.padre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.padre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hizq)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hizq)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hder)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hder)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

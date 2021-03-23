@@ -5,8 +5,6 @@ namespace Jako.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
-    using System.Data.Entity.Spatial;
-    using Jako.Models;
 
     [Table("Nodo")]
     public partial class Nodo
@@ -54,7 +52,6 @@ namespace Jako.Models
                 throw new Exception(e.Message);
             }
             return preg;
-
         }
 
     }

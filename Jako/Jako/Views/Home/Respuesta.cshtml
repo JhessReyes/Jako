@@ -1,0 +1,23 @@
+﻿@model List<Jako.Models.Nodo>
+@{
+    ViewBag.Title = "Respuesta";
+}
+
+<h2>Respuesta</h2>
+
+<body>
+    <div class="jumbotron">
+        @foreach (var item in Model)
+        {
+            if (ViewBag.Iden == item.Id)
+            {
+                <div class="jumbotron">
+                    <h1>Estas Pensando en... @item.pregunta</h1>
+                    <input class="btn-primary" type="button" onclick="" value="Si" />
+                    <input class="btn-warning" type="button" onclick="location.href='@(item.hder > 0 ? item.hder : item.Id)';" value="No" />
+                </div>
+            }
+        }
+    </div>
+</body>
+

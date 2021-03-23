@@ -2,29 +2,27 @@
 @{
     ViewBag.Title = "Pregunta";
 }
-@*<script>
-        function llamarVistaParcial() {
-                var laURLDeLaVista = '@Url.Action(Model.hizq > 0 ? "~/home/Pregunta/"+Model.hizq : "~/home/Pregunta/"+Model.Id)';
-            $.ajax({
-                cache: false,
-                async: true,
-                type: "GET",
-                url: laURLDeLaVista,
-                data: {},
-                success: function (response) {
-                    $('#resultado').html('');
-                    $('#resultado').html(response);
-                }
-            });
-        }
-    </script>*@
+<script>
+    function Pregunta() {
 
+        if (@Model.ObtenerP((Model.hizq.GetValueOrDefault() > 0 ? Model.hizq.Value : Model.Id)).hder> 0 && @Model.ObtenerP((Model.hizq.GetValueOrDefault() > 0 ? Model.hizq.Value : Model.Id)).hizq> 0) {
+            if (@Model.hizq > 0) {
+                return location.href = '' + @Model.hizq;
+            } else return location.href = '' + @Model.Id;
+        } else return location.pathname = "/home/Respuesta/" +@Model.hizq;
+        @*if (@Model.hder > 0)
+        {
+            res = id;
+        } else es = @Model.Id;*@
+    }
+
+</script>
 <html>
 <body>
-    <div class="jumbotron" style="justify-content">
+    <div class="jumbotron">
         <h1>@Model.pregunta</h1>
-        <input class="btn-primary" type="button" onclick="location.href='@(Model.hizq > 0 ? Model.hizq : Model.Id)';" value="Si" />
-        <input class="btn-warning" type="button" onclick="location.href='@(Model.hder > 0 ? Model.hizq : Model.Id)';" value="No" />
+        <input class="btn-primary" type="button" onclick="Pregunta()" value="Si" />
+        <input class="btn-warning" type="button" onclick="location.href='@(Model.hder > 0 ? Model.hder : Model.Id)';" value="No" />
     </div>
 </body>
 </html>
