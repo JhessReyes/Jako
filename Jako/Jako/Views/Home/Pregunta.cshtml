@@ -3,13 +3,25 @@
     ViewBag.Title = "Pregunta";
 }
 <script>
-    function Pregunta() {
+    function PreguntaSi() {
 
-        if (@Model.ObtenerP((Model.hizq.GetValueOrDefault() > 0 ? Model.hizq.Value : Model.Id)).hder> 0 && @Model.ObtenerP((Model.hizq.GetValueOrDefault() > 0 ? Model.hizq.Value : Model.Id)).hizq> 0) {
+        if (@Model.ObtenerP((Model.hizq.GetValueOrDefault() > 0 ? Model.hizq.Value : Model.Id)).hder> 0 || @Model.ObtenerP((Model.hizq.GetValueOrDefault() > 0 ? Model.hizq.Value : Model.Id)).hizq> 0) {
             if (@Model.hizq > 0) {
                 return location.href = '' + @Model.hizq;
             } else return location.href = '' + @Model.Id;
         } else return location.pathname = "/home/Respuesta/" +@Model.hizq;
+        @*if (@Model.hder > 0)
+        {
+            res = id;
+        } else es = @Model.Id;*@
+    }
+   function PreguntaNo() {
+
+        if (@Model.ObtenerP((Model.hder.GetValueOrDefault() > 0 ? Model.hder.Value : Model.Id)).hder> 0 || @Model.ObtenerP((Model.hder.GetValueOrDefault() > 0 ? Model.hder.Value : Model.Id)).hizq> 0) {
+            if (@Model.hder > 0) {
+                return location.href = '' + @Model.hder;
+            } else return location.href = '' + @Model.Id;
+        } else return location.pathname = "/home/Respuesta/" +@Model.hder;
         @*if (@Model.hder > 0)
         {
             res = id;
@@ -21,8 +33,8 @@
 <body>
     <div class="jumbotron">
         <h1>@Model.pregunta</h1>
-        <input class="btn-primary" type="button" onclick="Pregunta()" value="Si" />
-        <input class="btn-warning" type="button" onclick="location.href='@(Model.hder > 0 ? Model.hder : Model.Id)';" value="No" />
+        <input class="btn-primary" type="button" onclick="PreguntaSi()" value="Si" />
+        <input class="btn-warning" type="button" onclick="PreguntaNo()" value="No" />
     </div>
 </body>
 </html>
