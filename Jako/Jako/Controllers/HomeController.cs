@@ -54,7 +54,7 @@ namespace Jako.Controllers
         public ActionResult Listo(Nodo x) 
             {
             x.Listo();
-            return Redirect("~/home/New/" + x.Id);
+            return Redirect("~/home/New/" + x.ObtenerP(x.padre.GetValueOrDefault()).Id);
         }
 
     }
