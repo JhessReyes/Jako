@@ -2,31 +2,21 @@
 @{
     ViewBag.Title = "Home Page";
 }
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/Content/Jakocss.css" rel="stylesheet">
+</head>
+<body>
+    <div class="">
+        <blockquote class="blockquote text-center">
 
-<div class="jumbotron">
-    <h1>Nodos</h1>
-    @*<table class="table table-stripped">
-            <thead>
-                <tr>
-                    <th> Id </th>
-                    <th> Pregunta </th>
-                    <th> Nodo Izquierdo </th>
-                    <th> Nodo Derecho </th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>@item.Id</td>
-                        <td> @item.pregunta</td>
-                        <td> @item.hizq</td>
-                        <td> @item.hder</td>
-                        <td><a href="~/home/Pregunta/@item.Id">Iniciar</a></td>
-                    </tr>
-                }
-            </tbody>
-        </table>*@
-    <p><a href="~/home/Pregunta/1" class="btn btn-primary btn-lg">INICIAR &raquo;</a></p>
-</div>
-
+            <h1 class="display-1">JAKO</h1>
+            <h6 class="lead">Intentaré adividar lo que estas pensando</h6>
+            <div class="wrap">
+                <button class="button" type="button" onclick="location.href='Pregunta/1'" value="INICIAR &raquo;">INICIAR &raquo;</button>
+            </div>
+        </blockquote>
+    </div>
+</body>
+</html>

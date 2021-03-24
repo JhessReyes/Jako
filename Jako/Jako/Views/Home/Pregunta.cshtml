@@ -10,10 +10,6 @@
                 return location.href = '' + @Model.hizq;
             } else return location.href = '' + @Model.Id;
         } else return location.pathname = "/home/Respuesta/" +@Model.hizq;
-        @*if (@Model.hder > 0)
-        {
-            res = id;
-        } else es = @Model.Id;*@
     }
    function PreguntaNo() {
 
@@ -22,19 +18,22 @@
                 return location.href = '' + @Model.hder;
             } else return location.href = '' + @Model.Id;
         } else return location.pathname = "/home/Respuesta/" +@Model.hder;
-        @*if (@Model.hder > 0)
-        {
-            res = id;
-        } else es = @Model.Id;*@
     }
 
 </script>
 <html>
-<body>
-    <div class="jumbotron">
-        <h1>@Model.pregunta</h1>
-        <input class="btn-primary" type="button" onclick="PreguntaSi()" value="Si" />
-        <input class="btn-warning" type="button" onclick="PreguntaNo()" value="No" />
-    </div>
+<head>
+    <link href="~/Content/Jakocss.css" rel="stylesheet">
+</head>
+<body class="Quest">
+    <blockquote class="blockquote text-center ">
+        <div class="question" style="padding:3em;">
+            <h1 class="display-3">@Model.pregunta</h1>
+        </div>
+        <div class="answer" style="padding:5em;">
+            <input class="btn fourth" type="button" onclick="PreguntaSi()" value="Si" />
+            <input class="btn five" type="button" onclick="PreguntaNo()" value="No" />
+        </div>
+    </blockquote>
 </body>
 </html>

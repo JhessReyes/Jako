@@ -4,6 +4,7 @@ namespace Jako.Models
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity;
     using System.Linq;
 
     [Table("Nodo")]
@@ -52,6 +53,26 @@ namespace Jako.Models
                 throw new Exception(e.Message);
             }
             return preg;
+        }
+
+        public void Listo()
+        {
+            try
+            {
+                using (var context = new Model1())
+                {
+                    if (this.Id > 0) 
+                    {
+                        context.Entry(this).State = EntityState.Added;
+                        
+                    }
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
 
     }

@@ -43,5 +43,19 @@ namespace Jako.Controllers
             ViewBag.Iden = id;
             return View(F.Listar());
         }
+
+        public ActionResult New(int id = 0) 
+        {
+            return View(id > 0 ? nodos.ObtenerP(id)
+                : this.nodos
+                ); ;
+        }
+
+        public ActionResult Listo(Nodo x) 
+            {
+            x.Listo();
+            return Redirect("~/home/New/" + x.Id);
+        }
+
     }
 }

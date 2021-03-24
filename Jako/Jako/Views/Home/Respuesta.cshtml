@@ -3,21 +3,28 @@
     ViewBag.Title = "Respuesta";
 }
 
-<h2>Respuesta</h2>
-
-<body>
-    <div class="jumbotron">
+<html>
+<head>
+    <link href="~/Content/Jakocss.css" rel="stylesheet">
+</head>
+<body  class="Quest">
+    <blockquote class="blockquote text-center">
         @foreach (var item in Model)
         {
             if (ViewBag.Iden == item.Id)
             {
-                <div class="jumbotron">
-                    <h1>Estas Pensando en un@@... @item.pregunta</h1>
-                    <input class="btn-primary" type="button" onclick="" value="Si" />
-                    <input class="btn-warning" type="button" onclick="location.href='@(item.hder > 0 ? item.hder : item.Id)';" value="No" />
-                </div>
+            <h2 class="display-3">Respuesta</h2>
+            <div class="question" style="padding:3em;">
+                <h1 class="display-4">Estas Pensando en... @item.pregunta</h1>
+            </div>
+                    
+            <div class="answer" style="padding:5em;">
+                    <input class="btn fourth" type="button" onclick="location.href='/Home/index'" value="Si" />
+                    <input class="btn five" type="button" onclick="location.href = '/Home/New/' +@item.Id ;" value="No" />
+                   
+            </div>
             }
         }
-    </div>
+    </blockquote>
 </body>
-
+</html>
