@@ -177,3 +177,4 @@ C:\Users\jhess\OneDrive\Documentos\GitHub\Jako\Jako\Jako\bin\es\System.Web.WebPa
 C:\Users\jhess\OneDrive\Documentos\GitHub\Jako\Jako\Jako\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\jhess\OneDrive\Documentos\GitHub\Jako\Jako\Jako\bin\es\System.Web.WebPages.Razor.resources.dll
 C:\Users\jhess\OneDrive\Documentos\GitHub\Jako\Jako\Jako\obj\Debug\Jako.csproj.CopyComplete
+C:\Users\jhess\OneDrive\Documentos\GitHub\Jako\Jako\Jako\obj\Debug\Jako.csprojAssemblyReference.cache

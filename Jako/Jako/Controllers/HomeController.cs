@@ -53,8 +53,10 @@ namespace Jako.Controllers
 
         public ActionResult Listo(Nodo x) 
             {
+            ViewBag.Nod = x.ObtenerP(x.padre.GetValueOrDefault()).padre;
+            if (ViewBag.Nod < x.Id) { }
             x.Listo();
-            return Redirect("~/home/New/" + x.ObtenerP(x.padre.GetValueOrDefault()).Id);
+            return Redirect("~/home/New/" + ViewBag.Nod);
         }
 
     }
