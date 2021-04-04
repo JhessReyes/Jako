@@ -55,6 +55,27 @@ namespace Jako.Models
             return preg;
         }
 
+        public void Clonar() {
+            try
+            {               
+                using (var context = new Model1())
+                {
+  
+                    Nodo cl = (Nodo)this.MemberwiseClone();
+                    if (cl.Id > 0)
+                    {
+                        context.Entry(cl).State = EntityState.Added;
+
+                    }
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
         public void Listo()
         {
             try
@@ -68,11 +89,58 @@ namespace Jako.Models
                     }
                     context.SaveChanges();
                 }
+                //using (var context1 = new Model1())
+                //{
+                //    if (this.Id > 0)
+                //    {
+                //        context1.Entry(this).State = EntityState.Added;
+
+                //    }
+                //    context1.SaveChanges();
+                //}
             }
             catch (Exception e)
             {
                 throw new Exception(e.Message);
             }
+        }
+        public void FinalizarEn()
+        {
+            try
+            {
+                using (var context = new Model1())
+                {
+                    if (this.Id > 0)
+                    {
+                        context.Entry(this).State = EntityState.Modified;
+
+                    }
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public int LastId()
+        {
+            var id = 1;
+            var nodo = new List<Nodo>();
+            try
+            {
+                using (var context = new Model1())
+                {
+                    nodo = context.Nodo.ToList();
+                    id = nodo.Last().Id;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return id;
         }
 
     }

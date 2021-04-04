@@ -41,7 +41,8 @@ namespace Jako.Controllers
         public ActionResult Respuesta(int id)
         {
             ViewBag.Iden = id;
-            return View(F.Listar());
+            //return View(F.Listar());
+            return View(nodos.ObtenerP(id));
         }
 
         public ActionResult New(int id = 0) 
@@ -50,14 +51,37 @@ namespace Jako.Controllers
                 : this.nodos
                 ); ;
         }
-
-        public ActionResult Listo(Nodo x) 
-            {
-            ViewBag.Nod = x.ObtenerP(x.padre.GetValueOrDefault()).padre;
-            if (ViewBag.Nod < x.Id) { }
-            x.Listo();
-            return Redirect("~/home/New/" + ViewBag.Nod);
+        public ActionResult NewQuestion(int id = 0)
+        {
+            return View(id > 0 ? nodos.ObtenerP(id)
+                : this.nodos
+                ); ;
         }
+        public ActionResult Listo(Nodo x) 
+        {
+            ViewBag.Nod = x.ObtenerP(x.padre.GetValueOrDefault()).Id;
 
+            x.Listo();
+            return Redirect("~/Home/NewQuestion/" + (ViewBag.Nod));
+
+        }
+        public ActionResult Clo(Nodo x)
+        {
+            x.Clonar();
+            return Redirect("~/Home/New/" + x.Id);
+
+        }
+        public ActionResult Finalizar(Nodo x)
+        {
+            x.FinalizarEn();
+            ViewBag.Nod = x.ObtenerP(x.padre.GetValueOrDefault()).hizq;
+            return Redirect("/Home");
+
+        }
+        public ActionResult Editar(int id = 1)
+        {
+            return View();
+
+        }
     }
 }

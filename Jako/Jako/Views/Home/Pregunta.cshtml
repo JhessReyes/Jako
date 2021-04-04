@@ -9,7 +9,7 @@
             if (@Model.hizq > 0) {
                 return location.href = '' + @Model.hizq;
             } else return location.href = '' + @Model.Id;
-        } else return location.pathname = "/home/Respuesta/" +@Model.hizq;
+        } else return location.pathname = "/Home/Respuesta/" +@Model.hizq;
     }
    function PreguntaNo() {
 
@@ -17,7 +17,7 @@
             if (@Model.hder > 0) {
                 return location.href = '' + @Model.hder;
             } else return location.href = '' + @Model.Id;
-        } else return location.pathname = "/home/Respuesta/" +@Model.hder;
+        } else return location.pathname = "/Home/Respuesta/" +@Model.hder;
     }
 
 </script>
@@ -28,7 +28,7 @@
 <body class="Quest">
     <blockquote class="blockquote text-center ">
         <div class="question" style="padding:3em;">
-            <h1 class="display-3">@Model.pregunta</h1>
+            <h1 class="display-3">¿@Model.pregunta?</h1>
         </div>
         <div class="answer" style="padding:5em;">
             <input class="btn fourth" type="button" onclick="PreguntaSi()" value="Si" />

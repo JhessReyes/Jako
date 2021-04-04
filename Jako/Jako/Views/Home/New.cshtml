@@ -5,17 +5,17 @@
 @using (Html.BeginForm("Listo", "Home", FormMethod.Post))
 {
 
-    if (Model.hizq == 0 && Model.hder == 0)
-    {
+    //if (Model.hizq == 0 && Model.hder == 0)
+    //{
         <blockquote class="blockquote text-center align-items-center">
             <h1 class="display-4">¿En que estas pensando?</h1>
             <div class="form-group">
-                <h3>Estas pensando en</h3>
+                <h3>Estoy pensando en</h3>
                 <div style="display:flex; justify-content:center; margin-left:auto; margin-right:auto; align-items:center; text-align:center;">
                     <input type="text" name="pregunta" />
 
                     @Html.HiddenFor(x => x.Id)
-                    <input type="hidden" name="padre" value="@Model.Id" />
+                    <input type="hidden" name="padre" value="@(Model.Id)" />
                     <input type="hidden" name="hder" value="0" />
                     <input type="hidden" name="hizq" value="0" />
                 </div>
@@ -24,8 +24,8 @@
                 <button type="submit" class="btn-primary">Listo!</button>
             </div>
         </blockquote>
-    }
-    else
+    //}
+    @*else
     {
         ViewBag.Nod = 0;
         <blockquote class="blockquote text-center align-items-center">
@@ -47,7 +47,7 @@
                 <button type="submit" class="btn-primary" onclick="location.href='/Home'">Listo!</button>
             </div>
         </blockquote>
-    }
+    }*@
 
 
 }
