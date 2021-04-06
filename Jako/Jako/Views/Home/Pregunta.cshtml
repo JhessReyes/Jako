@@ -2,9 +2,9 @@
 @{
     ViewBag.Title = "Pregunta";
 }
+
 <script>
     function PreguntaSi() {
-
         if (@Model.ObtenerP((Model.hizq.GetValueOrDefault() > 0 ? Model.hizq.Value : Model.Id)).hder> 0 || @Model.ObtenerP((Model.hizq.GetValueOrDefault() > 0 ? Model.hizq.Value : Model.Id)).hizq> 0) {
             if (@Model.hizq > 0) {
                 return location.href = '' + @Model.hizq;
@@ -21,6 +21,7 @@
     }
 
 </script>
+
 <html>
 <head>
     <link href="~/Content/Jakocss.css" rel="stylesheet">
@@ -28,7 +29,7 @@
 <body class="Quest">
     <blockquote class="blockquote text-center ">
         <div class="question" style="padding:3em;">
-            <h1 class="display-3">¿@Model.pregunta?</h1>
+            <label class="display-3">¿@Model.pregunta.ToUpperInvariant()?</label>
         </div>
         <div class="answer" style="padding:5em;">
             <input class="btn fourth" type="button" onclick="PreguntaSi()" value="Si" />

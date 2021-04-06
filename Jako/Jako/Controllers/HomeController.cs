@@ -12,17 +12,9 @@ namespace Jako.Controllers
     public class HomeController : Controller
     {
         private Nodo nodos = new Nodo();
-        private Nodo F = new Nodo();
         private ArbolEntities arbol = new ArbolEntities();
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
@@ -41,7 +33,6 @@ namespace Jako.Controllers
         public ActionResult Respuesta(int id)
         {
             ViewBag.Iden = id;
-            //return View(F.Listar());
             return View(nodos.ObtenerP(id));
         }
 

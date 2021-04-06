@@ -89,15 +89,6 @@ namespace Jako.Models
                     }
                     context.SaveChanges();
                 }
-                //using (var context1 = new Model1())
-                //{
-                //    if (this.Id > 0)
-                //    {
-                //        context1.Entry(this).State = EntityState.Added;
-
-                //    }
-                //    context1.SaveChanges();
-                //}
             }
             catch (Exception e)
             {

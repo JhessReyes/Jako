@@ -3,67 +3,29 @@
     ViewBag.Title = "Respuesta";
 }
 
-@*<html>
-    <head>
-        <link href="~/Content/Jakocss.css" rel="stylesheet">
-    </head>
-    <body  class="Quest">
-        <blockquote class="blockquote text-center">
-            @foreach (var item in Model)
-            {
-                if (ViewBag.Iden == item.Id)
-                {
-                <h2 class="display-3">Respuesta</h2>
-                <div class="question" style="padding:3em;">
-                    <h1 class="display-4">Estas Pensando en... @item.pregunta</h1>
-                </div>
-                <script>
-                            function RNo() {
-                                @
-                                return location.href = '/Home/New/' +@item.Id ;
-                            }
-                </script>
-                <div class="answer" style="padding:5em;">
-                        <input class="btn fourth" type="button" onclick="location.href='/Home'" value="Si" />
-                        <input class="btn five" type="button" onclick="RNo()" value="No" />
-
-                </div>
-                }
-            }
-        </blockquote>
-    </body>
-    </html>*@
-
 @using (Html.BeginForm("Clo", "Home", FormMethod.Post))
 {
-
-    @Html.HiddenFor(x => x.Id)
-    <input type="hidden" name="pregunta" value="@Model.pregunta" />
-    <input type="hidden" name="padre" value="@(Model.LastId())" />
-    <input type="hidden" name="hder" value="0" />
-    <input type="hidden" name="hizq" value="0" />
-
-    <html>
+@Html.HiddenFor(x => x.Id)
+<input type="hidden" name="pregunta" value="@Model.pregunta" />
+<input type="hidden" name="padre" value="@(Model.LastId())" />
+<input type="hidden" name="hder" value="0" />
+<input type="hidden" name="hizq" value="0" />
+<html>
     <head>
         <link href="~/Content/Jakocss.css" rel="stylesheet">
     </head>
     <body class="Quest">
         <blockquote class="blockquote text-center">
-            <h2 class="display-3">Respuesta</h2>
-            <div class="question" style="padding:3em;">
-                <h1 class="display-4">Estas Pensando en... @Model.pregunta</h1>
-            </div>
-            @*<script>
-                    function RNo() {
-                        return location.href = '/Home/New/' +@Model.Id ;
-                        }
-                </script>*@
-            <div class="answer" style="padding:5em;">
-                <input class="btn fourth" type="button" onclick="location.href='/Home'" value="Si" />
-                <input class="btn five" type="submit" value="No" />
+            <label class="display-3">Respuesta</label>
+                <div class="question" style="padding:3em;">
+                    <label class="display-4">Estas Pensando en... @Model.pregunta.ToLowerInvariant()</label>
+                </div>
+                <div class="answer" style="padding:5em;">
+                    <input class="btn fourth" type="button" onclick="location.href='/Home'" value="Si" />
+                    <input class="btn five" type="submit" value="No" />
 
-            </div>
-        </blockquote>
+                </div>
+</blockquote>
     </body>
 </html>
 }
