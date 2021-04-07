@@ -1,9 +1,22 @@
-﻿@{
+﻿@model  Jako.Models.Nodo
+@{
     ViewBag.Title = "Home Page";
 }
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/Content/Jakocss.css" rel="stylesheet">
+</head>
+<body>
+    <div class="">
+        <blockquote class="blockquote text-center">
 
-<div class="jumbotron">
-    <h1>PRUEBA NODO</h1>
-    <p> es solo una prueba</p>
-</div>
-
+            <label class="display-1">JAKO</label>
+            <h6 class="lead">Intentaré adividar lo que estas pensando</h6>
+            <div class="wrap">
+                <button class="button" type="button" onclick=" location.assign('Home/Pregunta/1')">INICIAR &raquo;</button>
+            </div>
+        </blockquote>
+    </div>
+</body>
+</html>

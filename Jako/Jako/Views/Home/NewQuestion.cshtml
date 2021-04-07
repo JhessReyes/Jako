@@ -1,0 +1,31 @@
+﻿@model  Jako.Models.Nodo
+@{
+    ViewBag.Title = "NewQuestion";
+}
+
+
+@using (Html.BeginForm("Finalizar", "Home", FormMethod.Post))
+{
+    <head>
+        <link href="~/Content/Jakocss.css" rel="stylesheet">
+    </head>
+    <body class="Quest">
+        <blockquote class="blockquote text-center align-items-center">
+            <label class="display-4">¿ Cual es la diferencia de @Model.ObtenerP(Model.LastId()).pregunta.ToLowerInvariant() con @Model.pregunta.ToLowerInvariant() </label>
+
+            <div class="form-group">
+                <div style="display: flex; justify-content: center; margin-left: auto; margin-right: auto; align-items: center; text-align: center;" class="col-xs-4">
+                    <input style="height: 45px; border-radius: 10px 10px 10px 10px;" placeholder="Define un concepto de tal diferencia" type="text" name="pregunta" id="in" class="form-control" />
+                    @Html.HiddenFor(x => x.Id)
+                    @Html.HiddenFor(x => x.padre)
+                    <input type="hidden" name="hder" value="@(Model.LastId()-1)" />
+                    <input type="hidden" name="hizq" value="@(Model.LastId())" />
+                </div>
+            </div>
+
+            <div class="text-right">
+                <input type="submit" class="btn five" value="Listo!" />
+            </div>
+        </blockquote>
+    </body>
+}

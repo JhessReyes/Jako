@@ -1,0 +1,40 @@
+﻿@model  Jako.Models.Nodo
+@{
+    ViewBag.Title = "Pregunta";
+}
+
+<script>
+    function PreguntaSi() {
+        if (@Model.ObtenerP((Model.hizq.GetValueOrDefault() > 0 ? Model.hizq.Value : Model.Id)).hder> 0 || @Model.ObtenerP((Model.hizq.GetValueOrDefault() > 0 ? Model.hizq.Value : Model.Id)).hizq> 0) {
+            if (@Model.hizq > 0) {
+                return location.href = '' + @Model.hizq;
+            } else return location.href = '' + @Model.Id;
+        } else return location.pathname = "/Home/Respuesta/" +@Model.hizq;
+    }
+   function PreguntaNo() {
+
+        if (@Model.ObtenerP((Model.hder.GetValueOrDefault() > 0 ? Model.hder.Value : Model.Id)).hder> 0 || @Model.ObtenerP((Model.hder.GetValueOrDefault() > 0 ? Model.hder.Value : Model.Id)).hizq> 0) {
+            if (@Model.hder > 0) {
+                return location.href = '' + @Model.hder;
+            } else return location.href = '' + @Model.Id;
+        } else return location.pathname = "/Home/Respuesta/" +@Model.hder;
+    }
+
+</script>
+
+<html>
+<head>
+    <link href="~/Content/Jakocss.css" rel="stylesheet">
+</head>
+<body class="Quest">
+    <blockquote class="blockquote text-center ">
+        <div class="question" style="padding:3em;">
+            <label class="display-3">¿@Model.pregunta.ToUpperInvariant()?</label>
+        </div>
+        <div class="answer" style="padding:5em;">
+            <input class="btn fourth" type="button" onclick="PreguntaSi()" value="Si" />
+            <input class="btn five" type="button" onclick="PreguntaNo()" value="No" />
+        </div>
+    </blockquote>
+</body>
+</html>
