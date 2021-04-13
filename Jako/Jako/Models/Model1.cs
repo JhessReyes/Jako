@@ -8,7 +8,7 @@ namespace Jako.Models
     public partial class Model1 : DbContext
     {
         public Model1()
-            : base("name=TreeContexts")
+            : base("name=Model1")
         {
         }
 

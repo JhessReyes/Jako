@@ -55,12 +55,13 @@ namespace Jako.Models
             return preg;
         }
 
-        public void Clonar() {
+        public void Clonar()
+        {
             try
-            {               
+            {
                 using (var context = new Model1())
                 {
-  
+
                     Nodo cl = (Nodo)this.MemberwiseClone();
                     if (cl.Id > 0)
                     {
@@ -82,10 +83,10 @@ namespace Jako.Models
             {
                 using (var context = new Model1())
                 {
-                    if (this.Id > 0) 
+                    if (this.Id > 0)
                     {
                         context.Entry(this).State = EntityState.Added;
-                        
+
                     }
                     context.SaveChanges();
                 }

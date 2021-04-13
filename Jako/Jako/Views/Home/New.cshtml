@@ -12,7 +12,7 @@
             <label class="display-4" >¿En que estas pensando?</label>
             <div class="form-group">
                 <div style="display:flex; justify-content:center; margin-left:auto; margin-right:auto; align-items:center; text-align:center;" class="col-xs-4">
-                    <input style="height: 45px; border-radius: 10px 10px 10px 10px;" placeholder="Estoy pensando en..." type="text" name="pregunta" class="form-control" />
+                    <input style="height: 45px; border-radius: 10px 10px 10px 10px;" placeholder="Estoy pensando en..." type="text" name="pregunta" class="form-control" required/>
                     @Html.HiddenFor(x => x.Id)
                     <input type="hidden" name="padre" value="@(Model.Id)" />
                     <input type="hidden" name="hder" value="0" />
